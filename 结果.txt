@@ -1,0 +1,13 @@
+pred1      LightGBM                                                                86.8647
+pred2      加了osv（labelencoder）                                          88.256
+pred3      加了timestep                                                            88.2633
+pred4      进行五折交叉验证                                                      88.1507
+               进行十折交叉验证（优，但是没意义）                         88.25
+pred5      构造新特征，特征比大于15                                         88.368
+pred6      osv变成浮点数，lan进行labelencoder                         88.404
+pred7      LGB   n_estimators=2000                                          88.3927
+               XGB  2000                                                                88.8313
+               XGB2000+LGB2000                                                  88.8973      
+               XGB(subsample=0.85,n_estimators=5000)                 88.8727
+               LGB(n_estimators=5000)                                           88.5773
+               XGB5000+LGB5000                                                   88.9133         （最大）        
